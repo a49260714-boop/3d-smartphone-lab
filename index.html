@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>3D Smartphone lab by aryan kumar</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="brand">
+    <b>3D Smartphone Lab</b>
+    <span>Explore. Rotate. Touch. Test.</span>
+  </div>
+
+  <div class="tools">
+    <button id="tglL" class="only-m">Devices</button>
+    <button id="bCmp">Compare Phones</button>
+    <button id="bTest">Test Mode</button>
+    <button id="bFocus">Focus Phone</button>
+    <button id="bCap">Capture Device</button>
+    <button id="tglR" class="only-m">Info</button>
+  </div>
+</header>
+
+<div id="app">
+
+  <aside id="left" class="panel">
+    <input id="q" type="search" placeholder="Search smartphone...">
+
+    <h3>Brands</h3>
+    <div id="brands"></div>
+
+    <h3>Models</h3>
+    <div id="models"></div>
+  </aside>
+
+  <main id="stage">
+
+    <div class="grid"></div>
+
+    <div id="scene">
+
+      <div id="ph">
+
+        <!-- FRONT -->
+        <div class="f front">
+          <div id="scr"></div>
+        </div>
+
+        <!-- BACK -->
+        <div class="f back">
+
+          <button
+            id="backFlash"
+            class="back-flash"
+            title="Flashlight"
+          >⚡</button>
+
+          <div class="cam">
+            <i></i>
+            <i></i>
+            <i></i>
+            <u></u>
+          </div>
+
+          <div class="logo" id="bk"></div>
+        </div>
+
+        <!-- LEFT -->
+        <div class="f left">
+          <em style="top:120px;height:34px"></em>
+          <em style="top:166px;height:34px"></em>
+        </div>
+
+        <!-- RIGHT -->
+        <div class="f right">
+
+          <button
+            id="powerBtn"
+            class="power-btn"
+            title="Power"
+          >⏻</button>
+
+          <em style="top:140px;height:60px"></em>
+        </div>
+
+        <!-- TOP -->
+        <div class="f top"></div>
+
+        <!-- BOTTOM -->
+        <div class="f bottom">
+          <span class="usb"></span>
+          <span class="grill"></span>
+          <span class="grill r"></span>
+        </div>
+
+      </div>
+
+      <div id="floor"></div>
+
+    </div>
+
+    <div id="label">
+      <small>SELECTED DEVICE</small>
+      <b id="selName"></b>
+    </div>
+
+    <div id="ctrl">
+      <button data-c="L">⟲ Rotate left</button>
+      <button data-c="R">⟳ Rotate Right</button>
+      <button data-c="U">Tilt Up</button>
+      <button data-c="D">Tilt Down</button>
+      <button data-c="+">Zoom In</button>
+      <button data-c="-">Zoom Out</button>
+      <button data-c="0">Reset</button>
+    </div>
+
+    <div id="cmp" class="hide"></div>
+
+  </main>
+
+  <aside id="right" class="panel">
+
+    <h3>Device Information</h3>
+
+    <dl id="info"></dl>
+
+    <div id="testBox" class="hide">
+      <h3>Test Mode</h3>
+      <dl id="tm"></dl>
+    </div>
+
+  </aside>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
